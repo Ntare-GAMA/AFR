@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Registration | AutoFarmsRwanda</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2d5a3d 0%, #1a472a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #28a745;
+    }
+
+    .registration-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .registration-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .registration-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .registration-header h1 {
+      color: #1a472a;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .registration-header p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    .form-group label {
+      display: block;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #28a745;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #218838;
+    }
+
+    .info-section {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .info-section h3 {
+      color: #1a472a;
+      margin-bottom: 1rem;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-list li {
+      padding: 0.5rem 0;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-list li:before {
+      content: "✓";
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .profile-box {
+      background: linear-gradient(135deg, #1a472a 0%, #28a745 100%);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: white;
+    }
+
+    .profile-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+    .profile-text strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+
+      .service-options {
+        grid-template-columns: 1fr;
+      }
+      
+      .registration-box {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">AutoFarmsRwanda</a>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#tractors">Tractors</a></li>
+      <li><a href="index.html#precision">Precision Agri</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="registration-container">
+    <div class="registration-box">
+      <div class="registration-header">
+        <h1>Farmer Registration</h1>
+        <p>Access tractors, technology, and support for your farm</p>
+      </div>
+
+      <form action="/register/farmer" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="region">Farming Region *</label>
+            <input type="text" id="region" name="region" placeholder="e.g., Kigali, Musanze, Huye" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="farm-size">Farm Size (Hectares) *</label>
+            <select id="farm-size" name="farm_size" required>
+              <option value="">Select farm size</option>
+              <option value="0-5">0 - 5 hectares</option>
+              <option value="5-10">5 - 10 hectares</option>
+              <option value="10-20">10 - 20 hectares</option>
+              <option value="20-50">20 - 50 hectares</option>
+              <option value="50+">50+ hectares</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="crop-type">Primary Crop Type *</label>
+            <select id="crop-type" name="crop_type" required>
+              <option value="">Select crop type</option>
+              <option value="Maize">Maize</option>
+              <option value="Rice">Rice</option>
+              <option value="Beans">Beans</option>
+              <option value="Cassava">Cassava</option>
+              <option value="Coffee">Coffee</option>
+              <option value="Tea">Tea</option>
+              <option value="Mixed Crops">Mixed Crops</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Services Needed (Select all that apply)</label>
+          <div class="service-options">
+            <div class="checkbox-group">
+              <input type="checkbox" id="tractor-lease" name="services[]" value="Tractor Leasing">
+              <label for="tractor-lease">Tractor Leasing</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="maintenance" name="services[]" value="Maintenance Support">
+              <label for="maintenance">Maintenance Support</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="soil-monitoring" name="services[]" value="Soil Monitoring">
+              <label for="soil-monitoring">Soil Monitoring</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="iot-sensors" name="services[]" value="IoT Sensors">
+              <label for="iot-sensors">IoT Sensors</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="drone-imaging" name="services[]" value="Drone Imaging">
+              <label for="drone-imaging">Drone Imaging</label>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="training" name="services[]" value="Training & Support">
+              <label for="training">Training & Support</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="tractor-needs">Specific Tractor Needs</label>
+          <textarea id="tractor-needs" name="tractor_needs" placeholder="Describe what type of tractor work you need (plowing, planting, harvesting, etc.) and estimated hours per season..."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="additional-info">Additional Information</label>
+          <textarea id="additional-info" name="additional_info" placeholder="Any other details about your farm or needs..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Register as Farmer</button>
+
+        <div class="info-section">
+          <h3>What You Get</h3>
+          <ul class="info-list">
+            <li>Access to modern tractors on demand</li>
+            <li>Maintenance support and spare parts network</li>
+            <li>Smart farming technology and training</li>
+            <li>Competitive leasing rates</li>
+            <li>Connection to agricultural investors</li>
+            <li>24/7 technical support</li>
+          </ul>
+        </div>
+
+        <div class="profile-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect fill='%231a472a' width='80' height='80'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3EBM%3C/text%3E%3C/svg%3E" alt="Brionne Mushirarungu">
+          <div class="profile-text">
+            <strong>Brionne MUSHIRARUNGU</strong>
+            Founder || AutoFarmsRwanda<br>
+            <small>We're here to support your farming success</small>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AutoFarmsRwanda. All rights reserved.</p>
+  </footer>
+</body>
+</html>
