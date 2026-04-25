@@ -212,6 +212,7 @@ body {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -220,6 +221,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .card img {
@@ -500,17 +503,24 @@ footer {
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto 40px;
 }
 
 .side-video {
   width: 45%;
+  min-width: 220px;
+  max-width: 400px;
   max-height: 220px;
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
 }
 
 .side-video:hover {
