@@ -3,280 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login | AutoFarmsRwanda</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #0a1f1a 0%, #1a472a 100%);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .login-container {
-      background: white;
-      padding: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      max-width: 400px;
-      width: 100%;
-    }
-
-    .logo-section {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .logo-circle {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #1a472a, #28a745);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    h1 {
-      color: #1a472a;
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .subtitle {
-      color: #666;
-      font-size: 0.9rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      color: #333;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      font-size: 0.9rem;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1.5px solid #cbd5e0;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      transition: all 0.3s;
-      font-family: inherit;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      border-color: #1a472a;
-      box-shadow: 0 0 0 4px rgba(26, 71, 42, 0.08);
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 16px;
-      background: #1a472a;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      letter-spacing: 0.5px;
-      margin-top: 1rem;
-    }
-
-    .submit-btn:hover {
-      background: #28a745;
-      box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .submit-btn:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .alert {
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
-      display: none;
-    }
-
-    .alert.show {
-      display: block;
-    }
-
-    .alert-error {
-      background: #fee;
-      color: #c33;
-      border: 1px solid #fcc;
-    }
-
-    .alert-success {
-      background: #efe;
-      color: #3c3;
-      border: 1px solid #cfc;
-    }
-
-    .back-link {
-      text-align: center;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    .back-link a {
-      color: #1a472a;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-
-    .security-notice {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      color: #666;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .login-container {
-        padding: 2rem 1.5rem;
-        margin: 1rem;
-      }
-    }
-  </style>
+  <title>Admin Portal | AutoFarmsRwanda</title>
+  <link rel="stylesheet" href="afr-theme.css">
 </head>
-<body>
-  <div class="login-container">
-    <div class="logo-section">
-      <div class="logo-circle">🔐</div>
-      <h1>Admin Portal</h1>
-      <p class="subtitle">AutoFarmsRwanda Management System</p>
+<body style="background:linear-gradient(135deg,var(--green-dark) 0%,#0f2414 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px">
+
+  <!-- bg glow -->
+  <div style="position:fixed;top:-80px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(74,148,85,0.12),transparent 70%);pointer-events:none"></div>
+  <div style="position:fixed;bottom:-60px;left:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(200,146,42,0.07),transparent 70%);pointer-events:none"></div>
+
+  <div style="width:100%;max-width:420px;position:relative">
+    <!-- Logo mark -->
+    <div style="text-align:center;margin-bottom:32px">
+      <div style="width:80px;height:80px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:32px">🔐</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;margin-bottom:6px">Admin Portal</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.45);font-weight:300">AutoFarmsRwanda Management System</p>
     </div>
 
-    <div id="alertBox" class="alert"></div>
+    <div class="afr-card-white" style="border-radius:16px;padding:36px">
+      <div id="alertBox" class="afr-alert"></div>
 
-    <form id="adminLoginForm" action="https://formspree.io/f/mwvaaqqj" method="POST"><!-- Formspree integration -->
-      <div class="form-group">
-        <label for="email">Administrator Email</label>
-        <input type="email" id="email" name="email" required autocomplete="email" placeholder="admin@autofarmsrwanda.com">
+      <form id="adminLoginForm" action="https://formspree.io/f/mwvaaqqj" method="POST" class="afr-form">
+        <div class="afr-form-group">
+          <label for="email">Administrator Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="admin@autofarmsrwanda.rw">
+        </div>
+        <div class="afr-form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="afr-btn afr-btn-primary" id="loginBtn" style="margin-top:4px">Sign In to Admin Panel</button>
+      </form>
+
+      <div style="border-top:1px solid rgba(26,58,31,0.1);margin-top:20px;padding-top:16px;text-align:center">
+        <a href="index.html" style="font-size:13px;color:var(--green-mid);text-decoration:none;font-weight:500">← Back to Main Site</a>
       </div>
 
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Enter your password">
-      </div>
-
-      <button type="submit" class="submit-btn" id="loginBtn">
-        Sign In to Admin Panel
-      </button>
-    </form>
-
-    <div class="back-link">
-      <a href="index.html">← Back to Main Site</a>
-    </div>
-
-    <div class="security-notice">
-      🔒 Secure administrator access only
+      <div class="afr-security">🔒 Secure administrator access only</div>
     </div>
   </div>
+
+  <p style="margin-top:24px;font-size:12px;color:rgba(255,255,255,0.2)">&copy; 2025 AutoFarmsRwanda. All rights reserved.</p>
 
   <script>
     const form = document.getElementById('adminLoginForm');
     const alertBox = document.getElementById('alertBox');
     const loginBtn = document.getElementById('loginBtn');
 
-    function showAlert(message, type) {
-      alertBox.textContent = message;
-      alertBox.className = `alert alert-${type} show`;
-      setTimeout(() => {
-        alertBox.classList.remove('show');
-      }, 5000);
+    function showAlert(msg, type) {
+      alertBox.textContent = msg;
+      alertBox.className = `afr-alert afr-alert-${type} show`;
+      setTimeout(() => alertBox.classList.remove('show'), 5000);
     }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      // Disable button during login
       loginBtn.disabled = true;
       loginBtn.textContent = 'Signing in...';
-
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
       try {
         const response = await fetch('/api/admin/login', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });
-
         const data = await response.json();
-
         if (response.ok) {
-          // Store token and user info
           localStorage.setItem('adminToken', data.token);
           localStorage.setItem('adminUser', JSON.stringify(data.user));
-          
           showAlert('Login successful! Redirecting...', 'success');
-          
-          // Redirect to admin dashboard
-          setTimeout(() => {
-            window.location.href = 'admin-dashboard.html';
-          }, 1000);
+          setTimeout(() => { window.location.href = 'admin-dashboard.html'; }, 1000);
         } else {
           showAlert(data.error || 'Invalid credentials. Please try again.', 'error');
           loginBtn.disabled = false;
           loginBtn.textContent = 'Sign In to Admin Panel';
         }
-      } catch (error) {
-        console.error('Login error:', error);
+      } catch (err) {
         showAlert('Connection error. Please try again.', 'error');
         loginBtn.disabled = false;
         loginBtn.textContent = 'Sign In to Admin Panel';
       }
     });
 
-    // Check if already logged in
     window.addEventListener('load', () => {
-      const token = localStorage.getItem('adminToken');
-      if (token) {
-        window.location.href = 'admin-dashboard.html';
-      }
+      if (localStorage.getItem('adminToken')) window.location.href = 'admin-dashboard.html';
     });
   </script>
 </body>

@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AFR | Tractors, Tech & Investment</title>
   <link rel="stylesheet" href="autofarmsrwanda.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
- <header class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="Agriculture.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="hero-overlay"></div>
+
+  <!-- ===== HERO (video background preserved) ===== -->
+  <header class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="Agriculture.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
 
     <nav class="navbar">
-      <div class="logo">AutoFarmsRwanda</div>
+      <div class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2C6 2 4 8 4 12c0 4 2 6 8 6s8-2 8-6c0-4-2-10-8-10z"/><path d="M12 18v4M9 22h6"/></svg>
+        </div>
+        <span class="nav-logo-text">AutoFarmsRwanda</span>
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#tractors">Tractors</a></li>
@@ -23,188 +30,269 @@
         <li><a href="#invest">Invest</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <a href="#invest" class="nav-cta">Get Started</a>
     </nav>
-    <div class="overlay-text">
-      <h1>Linking Farmers with Future-Tech & Investors</h1>
+
+    <div class="hero-body">
+      <div class="hero-badge"><div class="hero-badge-dot"></div><span>Rwanda's Smart Farming Platform</span></div>
+      <h1>Linking Farmers with<br><em>Future-Tech</em> &amp; Investors</h1>
       <p>Smart Farming. Trusted Investment. Tractors on Demand.</p>
-      <a href="#invest" class="btn">Get Started</a>
+      <div class="hero-btns">
+        <a href="#invest" class="btn-primary">Get Started</a>
+        <a href="#tractors" class="btn-outline">Explore Services →</a>
+      </div>
+    </div>
+
+    <div class="hero-stats-strip">
+      <div class="hero-stat"><span class="hero-stat-num">500+</span><span class="hero-stat-label">Active Farmers</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">120+</span><span class="hero-stat-label">Tractors Deployed</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">80+</span><span class="hero-stat-label">Investors Onboard</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">100%</span><span class="hero-stat-label">ROI Transparency</span></div>
     </div>
   </header>
 
-  <section id="tractors" class="section video-background">
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="w.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h2>Tractor Leasing & Maintenance</h2>
-    <div class="flex-cards">
-      <div class="card">
-        <img src="ygt.jpg" alt="Tractor Use">
-        <h3>Use On-Demand</h3>
-        <p>Access powerful tractors where and when you need them.</p>
-      </div>
-      <div class="card">
-        <img src="uj.jpg" alt="Tractor Maintenance">
-        <h3>Maintenance Network</h3>
-        <p>Partnered workshops & spare parts near all major regions.</p>
-      </div>
-      <div class="card">
-        <img src="ed.png" alt="Tractor Distribution">
-        <h3>Distribution</h3>
-        <p>Logistics to get machinery directly to rural farmers.</p>
-      </div>
+  <!-- ===== MARQUEE BAND ===== -->
+  <div class="marquee-band">
+    <div class="marquee-inner">
+      <span class="marquee-item">Smart Farming <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Tractors on Demand <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Trusted Investment <span class="marquee-dot"></span></span>
+      <span class="marquee-item">IoT Agriculture <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Drone Imaging <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Rwanda AgriTech <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Soil Intelligence <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Smart Farming <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Tractors on Demand <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Trusted Investment <span class="marquee-dot"></span></span>
+      <span class="marquee-item">IoT Agriculture <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Drone Imaging <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Rwanda AgriTech <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Soil Intelligence <span class="marquee-dot"></span></span>
     </div>
+  </div>
 
-    <div class="tractor-form-container">
-      <h2>Tractor Leasing & Maintenance Inquiry</h2>
-      <form action="https://formspree.io/f/mwvaaqqj" method="POST" class="registration-form"><!-- Formspree integration -->
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="region" placeholder="Farming Region" required>
-        <input type="text" name="tractor_need" placeholder="Tractor Needs" required>
-        <button type="submit">Register as Farmer</button>
+  <!-- ===== TRACTORS SECTION ===== -->
+  <section id="tractors" class="section-cream">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <div class="section-tag"><div class="tag-line"></div><span>Our Fleet</span></div>
+        <h2 class="section-title">Tractor Access &amp; <em>Support</em></h2>
+        <p class="section-intro">Access powerful machinery where and when you need it — backed by a nationwide maintenance network.</p>
+      </div>
 
-        <div class="form-profile-box">
-          <img src="brii.png" alt="Brionne Mushirarungu">
-          <div class="profile-text">
-            <strong>Brionne MUSHIRARUNGU</strong><br>
-            Founder || AutoFarmsRwanda
+      <div class="flex-cards fade-up">
+        <div class="afr-card">
+          <div class="afr-card-img">
+            <img src="ygt.jpg" alt="Tractor Use">
+            <div class="card-tag">On-Demand</div>
+          </div>
+          <div class="afr-card-body">
+            <h3>Use On-Demand</h3>
+            <p>Access powerful tractors where and when you need them.</p>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
-</section>
+        <div class="afr-card">
+          <div class="afr-card-img">
+            <img src="uj.jpg" alt="Tractor Maintenance">
+            <div class="card-tag">Nationwide</div>
+          </div>
+          <div class="afr-card-body">
+            <h3>Maintenance Network</h3>
+            <p>Partnered workshops &amp; spare parts near all major regions.</p>
+          </div>
+        </div>
+        <div class="afr-card">
+          <div class="afr-card-img">
+            <img src="ed.png" alt="Tractor Distribution">
+            <div class="card-tag">Logistics</div>
+          </div>
+          <div class="afr-card-body">
+            <h3>Distribution</h3>
+            <p>Logistics to get machinery directly to rural farmers.</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Tractor Leasing Form -->
+      <div class="tractor-form-container fade-up">
+        <h2>Tractor Leasing &amp; Maintenance Inquiry</h2>
+        <form action="https://formspree.io/f/mwvaaqqj" method="POST" class="registration-form">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="region" placeholder="Farming Region" required>
+          <input type="text" name="tractor_need" placeholder="Tractor Needs" required>
+          <button type="submit">Register as Farmer</button>
 
-  <section id="precision" class="section dark-bg">
-    <h2>Smart Farming Powered by IoT Technology
-</h2>
-    <p>We leverage drone imaging, soil intelligence, and IoT-powered analytics to optimize farm operations—delivering predictable, scalable returns for agri-investors.</p>
-    <div class="features">
-  <section id="precision" class="section dark-bg">
-  <h2>Precision Agriculture Tools</h2>
-  <p>Our platform provides drone imaging, soil sensors, and IoT analytics to maximize yields and sustainability.</p>
-  
-  <div class="feature-cards">
-    <div class="feature-card">
-      <img src="ikr.jpg" alt="Soil Monitoring">
-      <h3>Soil Monitoring</h3>
-      <p>Track soil health with real-time sensors and data.</p>
+          <div class="form-profile-box">
+            <img src="brii.png" alt="Brionne Mushirarungu">
+            <div class="profile-text">
+              <strong>Brionne MUSHIRARUNGU</strong>
+              <span>Founder || AutoFarmsRwanda</span>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="feature-card">
-      <img src="fv.png" alt="Crop Analytics">
-      <h3>Crop Analytics</h3>
-      <p>Use AI to analyze crop performance and predict yield.</p>
-    </div>
-    <div class="feature-card">
-      <img src="ai.png" alt="Drone Integration">
-      <h3>Drone Integration</h3>
-      <p>Deploy aerial imaging for efficient farm insights.</p>
-    </div>
-  </div>
-</section>
-
-</div>
   </section>
 
- <section id="invest" class="section image-bg">
-  <div class="overlay"></div>
+  <!-- ===== PRECISION AGRICULTURE ===== -->
+  <section id="precision" class="section-dark">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <div class="section-tag light"><div class="tag-line gold"></div><span>Technology</span></div>
+        <h2 class="section-title light">Smart Farming Powered by<br><em>IoT Technology</em></h2>
+        <p class="section-intro light">We leverage drone imaging, soil intelligence, and IoT-powered analytics to optimize farm operations — delivering predictable, scalable returns for agri-investors.</p>
+      </div>
 
-  <div class="content">
-    <h2>Invest in Dreams of Agriculture</h2>
-    <p>We offer a secure portal where investors can fund real farms, buy into tractor cooperatives, and monitor ROI live.</p>
-    <a href="investor-overview.html" class="btn">Join as Investor</a>
-    <a href="farmer-registration.html" class="btn btn-outline">Join as Farmer</a>
-  </div>
-</section>
+      <div class="feature-cards fade-up">
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="ikr.jpg" alt="Soil Monitoring">
+          </div>
+          <div class="feature-card-body">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 4 6 4 10c0 5.25 8 12 8 12s8-6.75 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Soil Monitoring</h3>
+            <p>Track soil health with real-time sensors and data analytics.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="fv.png" alt="Crop Analytics">
+          </div>
+          <div class="feature-card-body">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3>Crop Analytics</h3>
+            <p>Use AI to analyze crop performance and predict yield outcomes.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="ai.png" alt="Drone Integration">
+          </div>
+          <div class="feature-card-body">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>Drone Integration</h3>
+            <p>Deploy aerial imaging for efficient and precise farm insights.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== INVEST SECTION (image-bg preserved: hjk.jpg) ===== -->
+  <section id="invest" class="section-invest">
+    <div class="invest-overlay"></div>
+    <div class="invest-content fade-up">
+      <div class="section-tag light" style="justify-content:center"><div class="tag-line gold"></div><span>Opportunities</span></div>
+      <h2 class="section-title light" style="text-align:center">Invest in the <em>Dreams</em><br>of Agriculture</h2>
+      <p class="section-intro light" style="text-align:center;max-width:580px;margin:0 auto 40px">We offer a secure portal where investors can fund real farms, buy into tractor cooperatives, and monitor ROI live.</p>
+      <div class="invest-btns">
+        <a href="investor-overview.html" class="btn-primary">Join as Investor</a>
+        <a href="farmer-registration.html" class="btn-outline-gold">Join as Farmer</a>
+      </div>
+    </div>
+  </section>
 
- <section id="contact" class="contact-section">
-  <div class="overlay"></div>
+  <!-- ===== CONTACT (video cards preserved + themed) ===== -->
+  <section id="contact" class="contact-section">
 
-  <div class="video-row">
-    <video autoplay muted loop playsinline class="side-video left-video">
-      <source src="row.mp4" type="video/mp4">
-    </video>
-    <video autoplay muted loop playsinline class="side-video right-video">
-      <source src="row%202.mp4" type="video/mp4"><!-- Space encoded for GitHub Pages -->
-    </video>
-  </div>
+    <!-- Section Header -->
+    <div class="contact-header fade-up">
+      <div class="section-tag light" style="justify-content:center"><div class="tag-line gold"></div><span>Reach Us</span></div>
+      <h2 class="section-title light" style="text-align:center">Get in <em>Touch</em></h2>
+      <p class="section-intro light" style="text-align:center;max-width:520px;margin:0 auto 56px">Have questions about our platform? Our team is here to guide you — whether you're a farmer, investor, or partner.</p>
+    </div>
 
-  <div class="contact-content">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/mwvaaqqj" method="POST"><!-- Formspree integration -->
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+    <!-- Video Cards Row (logic preserved: row.mp4 + row 2.mp4) -->
+    <div class="video-row fade-up">
+      <div class="video-card">
+        <div class="video-card-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Farm in Action
+        </div>
+        <video autoplay muted loop playsinline class="side-video">
+          <source src="row.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-footer">Tractor operations across Rwanda's farmland</div>
+      </div>
+      <div class="video-card">
+        <div class="video-card-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Harvest Season
+        </div>
+        <video autoplay muted loop playsinline class="side-video">
+          <source src="row 2.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-footer">Real harvests, real results — season after season</div>
+      </div>
+    </div>
 
+    <!-- Contact Form -->
+    <div class="contact-content fade-up">
+      <form action="https://formspree.io/f/mwvaaqqj" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-
-
-
- <section id="invest" class="section video-section">
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="Invest%20in.mp4" type="video/mp4"><!-- Space encoded for GitHub Pages -->
-    Your browser does not support the video tag.
-  </video>
-  <div class="video-overlay"></div>
-
-  <div class="video-content">
-    <h2>Invest in Agriculture</h2>
-    <p>We offer a secure portal where investors can fund real farms, buy into tractor cooperatives, and monitor ROI live.</p>
-    <form action="https://formspree.io/f/mwvaaqqj" method="POST" class="registration-form"><!-- Formspree integration -->
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="investment_focus" placeholder="Investment Focus (e.g., tractors, irrigation)" required>
-      <button type="submit">Register as Investor</button>
-    </form>
-  </div>
-</section>
-
-
-<style>
-.registration-form {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.registration-form input,
-.registration-form button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-.registration-form input {
-  background: #fff;
-  color: #333;
-}
-.registration-form button {
-  background: #28a745;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.registration-form button:hover {
-  background: #218838;
-}
-</style>
-
-  <footer>
-    <p>&copy; 2025 AutoFarmsRwanda. All rights reserved.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="afr-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2C6 2 4 8 4 12c0 4 2 6 8 6s8-2 8-6c0-4-2-10-8-10z"/><path d="M12 18v4M9 22h6"/></svg>
+          </div>
+          <span class="nav-logo-text">AutoFarmsRwanda</span>
+        </div>
+        <p>Bridging the gap between Rwanda's farmers, technology, and investors since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#tractors">Tractor Leasing</a></li>
+          <li><a href="#precision">Precision Agri</a></li>
+          <li><a href="investor-overview.html">Invest</a></li>
+          <li><a href="farmer-registration.html">Farmer Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Portals</h4>
+        <ul>
+          <li><a href="investor-login.html">Investor Login</a></li>
+          <li><a href="investor-registration.html">Investor Register</a></li>
+          <li><a href="dashboard-auth.html">Dashboard</a></li>
+          <li><a href="consultation-schedule.html">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#contact">Send a Message</a></li>
+          <li><a href="#">Kigali, Rwanda</a></li>
+          <li><a href="#">info@autofarmsrwanda.rw</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AutoFarmsRwanda. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">f</a>
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">tw</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="autofarmsrwanda.js"></script>
 </body>
 </html>
